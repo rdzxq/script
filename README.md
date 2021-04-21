@@ -149,3 +149,28 @@ infyield.TextSize = 14.000
 infyield.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
+
+
+--Scripts
+
+
+local function YOWTF_fake_script() -- main.LocalScript 
+	local script = Instance.new('LocalScript', main)
+
+	local Plr = game.Players.LocalPlayer
+	
+	Plr:GetMouse().KeyDown:Connect(function(K)
+		if K == "q" then
+			script.Parent.Visible = true
+		end
+	end)
+	
+	local Plr = game.Players.LocalPlayer
+	
+	Plr:GetMouse().KeyDown:Connect(function(K)
+		if K == "e" then
+			script.Parent.Visible = false
+		end
+	end)
+end
+coroutine.wrap(YOWTF_fake_script)()
